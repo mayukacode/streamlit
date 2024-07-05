@@ -120,4 +120,7 @@ colors = ['gold', 'lightcoral', 'lightskyblue', 'lightgreen', 'lightpink']
 explode = (0.1, 0, 0, 0, 0)  # 照明部分を少し突き出す
 
 fig, ax = plt.subplots()
-ax.pie(sizes, explode=explode, labels=labels, colors=colors, autopct
+ax.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140)
+ax.axis('equal')  # 円を円として表示
+
+st.pyplot(fig)
