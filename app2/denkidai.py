@@ -5,7 +5,47 @@ matplotlib.use('Agg')  # バックエンドを非対話型に設定
 import matplotlib.pyplot as plt
 import japanize_matplotlib  # 日本語表示用ライブラリ
 
-# 関数定義（省略）
+def calculate_lighting_cost(watt, hours):
+    cost_per_kwh = 27  # 円/kWh
+    kwh = watt / 1000 * hours  # kWh
+    cost = kwh * cost_per_kwh  # 円
+    return cost
+
+def calculate_cooking_cost(device_watts_hours):
+    cost_per_kwh = 27  # 円/kWh
+    total_cost = 0
+    for watt, hours in device_watts_hours:
+        kwh = watt / 1000 * hours  # kWh
+        cost = kwh * cost_per_kwh  # 円
+        total_cost += cost
+    return total_cost
+
+def calculate_laundry_cost(device_watts_hours):
+    cost_per_kwh = 27  # 円/kWh
+    total_cost = 0
+    for watt, hours in device_watts_hours:
+        kwh = watt / 1000 * hours  # kWh
+        cost = kwh * cost_per_kwh  # 円
+        total_cost += cost
+    return total_cost
+
+def calculate_airconditioner_cost(device_watts_hours):
+    cost_per_kwh = 27  # 円/kWh
+    total_cost = 0
+    for watt, hours in device_watts_hours:
+        kwh = watt / 1000 * hours  # kWh
+        cost = kwh * cost_per_kwh  # 円
+        total_cost += cost
+    return total_cost
+
+def calculate_hobbywork_cost(device_watts_hours):
+    cost_per_kwh = 27  # 円/kWh
+    total_cost = 0
+    for watt, hours in device_watts_hours:
+        kwh = watt / 1000 * hours  # kWh
+        cost = kwh * cost_per_kwh  # 円
+        total_cost += cost
+    return total_cost
 
 st.title('一日ごとの電気代（カテゴリ別）')
 
