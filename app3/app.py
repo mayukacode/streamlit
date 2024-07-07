@@ -16,35 +16,35 @@ elif selected_animal == "🐰　うさぎ　🐰":
 st.image("gachagacha.png")
 
 if st.button("まわす"):
-    time.sleep(2)
+    with st.spinner('ちょっと待ってね...'):
+        time.sleep(2)
+        
+        st.image("gach.png")
+        time.sleep(2)
+        
+        options = ["はずれ","ケーキ","ドーナツ","チョコ","キャンディ","つみき","ぬいぐるみ","しんかんせん","ラッパ"]
+        luck = np.random.choice(options, 1, p=[0.4, 0.075, 0.075, 0.075, 0.075, 0.075, 0.075, 0.075, 0.075])[0]
 
-    st.image("gach.png")
-    time.sleep(2)
+        if luck == "はずれ":
+            image = "hazure.png"
+        elif luck == "ケーキ":
+            image = "shortcake.png"
+        elif luck == "ドーナツ":
+            image = "donut.png"
+        elif luck == "チョコ":
+            image = "itachoco.png"
+        elif luck == "キャンディ":
+            image = "candy.png"
+        elif luck == "つみき":
+            image = "tsumiki.png" 
+        elif luck == "ぬいぐるみ":
+            image = "bear.png"
+        elif luck == "しんかんせん":
+            image = "shinkansen.png"
+        elif luck == "ラッパ":
+            image = "rappa.png"
 
-    options = ["はずれ","ケーキ","ドーナツ","チョコ","キャンディ","つみき","ぬいぐるみ","しんかんせん","ラッパ"]
-    luck = np.random.choice(options, 1, p=[0.4, 0.075, 0.075, 0.075, 0.075, 0.075, 0.075, 0.075, 0.075])[0]
-
-    if luck == "はずれ":
-        image = "hazure.png"
-    elif luck == "ケーキ":
-        image = "shortcake.png"
-    elif luck == "ドーナツ":
-        image = "donut.png"
-    elif luck == "チョコ":
-        image = "itachoco.png"
-    elif luck == "キャンディ":
-        image = "candy.png"
-    elif luck == "つみき":
-        image = "tsumiki.png" 
-    elif luck == "ぬいぐるみ":
-        image = "bear.png"
-    elif luck == "しんかんせん":
-        image = "shinkansen.png"
-    elif luck == "ラッパ":
-        image = "rappa.png"
-
-    st.image(image)
+        st.image(image)
 
 if st.button("もういちど"):
-    placeholder = st.empty()
-    placeholder.empty()
+    st.caching.clear_cache()
