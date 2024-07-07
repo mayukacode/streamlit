@@ -4,13 +4,13 @@ import numpy as np
 st.title("ガチャガチャをまわせ♪")
 
 
-selected_animal = st.sidebar.selectbox("だれにする？", ["🐶　いぬ　🐶", "🐱　ねこ　🐱", "🐰　うさぎ　🐰"])
+selected_animal = st.sidebar.selectbox("だれにする？", ["🐶いぬ🐶", "🐱ねこ🐱", "🐰うさぎ🐰"])
 
-if selected_animal == "🐶　いぬ　🐶": 
+if selected_animal == "🐶いぬ🐶": 
     st.sidebar.image("dog.png")
-elif  selected_animal == "🐱　ねこ　🐱": 
+elif  selected_animal == "🐱ねこ🐱": 
     st.sidebar.image("cat.png")
-elif selected_animal == "🐰　うさぎ　🐰": 
+elif selected_animal == "🐰うさぎ🐰": 
     st.sidebar.image("usagi.png")
 
 
