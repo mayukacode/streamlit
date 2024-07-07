@@ -3,7 +3,7 @@ import numpy as np
 import time
 
 st.title("ガチャガチャをまわせ♪")
- 
+
 
 selected_animal = st.sidebar.selectbox("だれにする？", ["🐶　いぬ　🐶", "🐱　ねこ　🐱", "🐰　うさぎ　🐰"])
 
@@ -23,8 +23,8 @@ if st.button("まわす"):
   st.image("gach.png")
   time.sleep(2)
 
-  options = ["はずれ","ケーキ","ドーナツ","チョコ","キャンディ","つみき","ぬいぐるみ","しんかんせん","ラッパ"]
-  luck = np.random.choice(options, 1, p=[0.4,0.075,0.075,0.075,0.075,0.075,0.075,0.075,0.075])[0]
+  options = ["はずれ","ケーキ","ドーナツ"]
+  luck = np.random.choice(options, 1, p=[0.4,0.3,0.3])[0]
  
   if luck=="はずれ":
      image = "hazure.png"
@@ -32,18 +32,6 @@ if st.button("まわす"):
        image = "shortcake.png"
   elif luck=="ドーナツ":
        image = "donut.png"
-  elif luck=="チョコ":
-       image = "itachoco.png"
-  elif luck=="キャンディ":
-     image = "candy.png"
-  elif luck=="つみき":
-     image = "tsumiki.png" 
-  elif luck=="ぬいぐるみ":
-     image = "bear.png"
-  elif luck=="しんかんせん":
-     image = "shinkansen.png"
-  elif luck=="ラッパ":
-     image = "rappa.png"
 
   st.image(image)
 if st.button("もういちど"):
